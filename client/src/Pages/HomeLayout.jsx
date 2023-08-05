@@ -1,8 +1,12 @@
 import React from 'react'
+import { Outlet } from 'react-router-dom'
 
 function HomeLayout() {
   return (
-    <h1>HomeLayout</h1>
+    <div>
+      <nav>NavBar</nav>
+      <Outlet />
+    </div>
   )
 }
 
