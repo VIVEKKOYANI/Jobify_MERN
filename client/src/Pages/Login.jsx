@@ -1,6 +1,7 @@
 import React from 'react'
 import Wrapper from '../assets/wrappers/RegisterAndLoginPage';
 import { FormRow, Logo } from '../components';
+import { Link } from 'react-router-dom';
 
 function Login() {
   return (
