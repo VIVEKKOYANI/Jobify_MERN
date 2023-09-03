@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { HomeLayout, Landing, Register, Login, DashboardLayout, Error, AddJob, Starts, AllJobs, Profile, Admin } from './Pages'
 import { action as registerAction } from './Pages/Register';
 import { action as loginAction } from './Pages/Login';
+import { loader as DashboardLoader } from './Pages/DashboardLayout';
 
 export const checkDefaultTheme = () => {
   const isDarkTheme = localStorage.getItem('darkTheme') === 'true';
@@ -35,6 +36,7 @@ const router = createBrowserRouter([
       {
         path: '/dashboard',
         element: <DashboardLayout />,
+        loader: DashboardLoader,
         children: [
           {
             index: true,
