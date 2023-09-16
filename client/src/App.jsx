@@ -4,6 +4,7 @@ import { HomeLayout, Landing, Register, Login, DashboardLayout, Error, AddJob, S
 import { action as registerAction } from './Pages/Register';
 import { action as loginAction } from './Pages/Login';
 import { loader as DashboardLoader } from './Pages/DashboardLayout';
+import { loader as allJobsLoader } from './Pages/AllJobs';
 import { action as  addJobAction} from './Pages/AddJob';
 
 export const checkDefaultTheme = () => {
@@ -50,7 +51,8 @@ const router = createBrowserRouter([
           },
           {
             path: 'all-jobs',
-            element: <AllJobs />
+            element: <AllJobs />,
+            loader: allJobsLoader
           },
           {
             path: 'profile',

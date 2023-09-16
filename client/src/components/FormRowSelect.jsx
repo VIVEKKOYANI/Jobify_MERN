@@ -4,7 +4,7 @@ function FormRowSelect({name, labelText, list, defaultValue = ''}) {
   return (
     <div className="form-row">
       <label htmlFor={name} className="form-label">
-        {labeText || name}
+        {labelText || name}
       </label>
       <select
         name={name}
