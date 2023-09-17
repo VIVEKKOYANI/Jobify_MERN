@@ -22,6 +22,7 @@ import { action as addJobAction } from "./Pages/AddJob";
 import { action as EditJobAction } from "./Pages/EditJob";
 import { loader as EditJobLoader } from "./Pages/EditJob";
 import { action as DeleteJobAction } from "./Pages/DeleteJob";
+import { loader as AdminLoader } from "./Pages/Admin";
 
 export const checkDefaultTheme = () => {
   const isDarkTheme = localStorage.getItem("darkTheme") === "true";
@@ -77,6 +78,7 @@ const router = createBrowserRouter([
           {
             path: "admin",
             element: <Admin />,
+            loader: AdminLoader,
           },
           {
             path: "edit-job/:id",
