@@ -7,11 +7,18 @@ import { toast } from "react-toastify";
 import customFetch from "../utils/customFetch";
 
 export const loader = async ({ params }) => {
-  console.log("params",params);
-  return null;
+  try {
+    const {data} = await customFetch.get(`/jobs/${params.id}`);
+    return data;
+  } catch (error) {
+    toast.error(error.response.data.msg);
+    return redirect('/dashboard/all-jobs');
+  }
 };
 
 export const action = async () => {
+  const {job} = useLoaderData();
+  console.log(job);
   return null;
 };
 
