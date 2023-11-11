@@ -6,7 +6,7 @@ const app = express();
 import morgan from "morgan";
 import mongoose from "mongoose";
 import cookieParser from "cookie-parser";
-import cloudinary from "cloudinary";
+import cloudinary from "cloudinary"; 
 
 // routers
 import jobRouter from "./routes/jobRouter.js";
